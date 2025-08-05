@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.hero-section {
+  position: relative;
   min-height: 100vh;
+  background-image: url('/public/background.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  background: rgba(0, 0, 0, 0.4); /* more transparent */
+  backdrop-filter: blur(1px); /* stronger blur */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar .highlight {
+  color: #00d8ff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00fff7;
+}
+
+
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
   color: white;
+  padding: 3rem 1rem;
+  margin-top: 80px; /* Avoid overlap with navbar */
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-content h2 p {
+  font-size: 1.5rem;
+  color: #00d8ff;
 }
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+  
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #00d8ff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #00b4cc;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #00d8ff;
+  color: #00d8ff;
+}
+
+.btn-secondary:hover {
+  background-color: #00d8ff;
+  color: #000;
+}
+
+
